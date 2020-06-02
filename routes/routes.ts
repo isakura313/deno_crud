@@ -1,18 +1,13 @@
 import { Router } from "https://deno.land/x/denotrain@v0.5.0/mod.ts";
-import { addTodo, getAllTodo, editTodo, deleteTodo } from "../models/todo.ts";
+import { addTodo, getAllTodo, editTodo, deleteTodo } from "../models/models.ts";
 
 const api = new Router();
 
-api.get("/privet",(ctx)=>{
-    return "ну привет";
-})
-
-
 api.get("/", (ctx) => {
-  return getAllTodo().then(result => {
+  return getAllTodo().then((result) => {
     return result.rows;
-  })
-})
+  });
+});
 
 api.post("/", (ctx) => {
   const body = {

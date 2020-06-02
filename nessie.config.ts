@@ -1,4 +1,4 @@
-import { ClientPostgreSQL, nessieConfig } from "https://deno.land/x/nessie/mod.ts"; 
+import { ClientPostgreSQL} from "https://deno.land/x/nessie/mod.ts"; 
 
 const migrationFolder = "./migrations";
 
